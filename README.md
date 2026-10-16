@@ -2,18 +2,22 @@
 
 A replayable Minecraft adventure from Dadcraft73. Gather supplies, grow a tree, explore biome-themed encounters and bank relics together.
 
-**Current playtest: 0.2.13 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
+**Current playtest: 0.2.14 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
 
 ## Downloads
 
 | Download | Use it for |
 |---|---|
-| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.13/Expedition-Coop-Server-0.2.13.zip) | A new server installation. Starts clean in the Expedition Hall. |
-| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.13/Expedition-Server-Update-0.2.13.zip) | Updating an existing 0.2.11 or 0.2.12 world while keeping its players and progress. |
+| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | A new server installation. Starts clean in the Expedition Hall. |
+| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Server-Update-0.2.14.zip) | Updating an existing 0.2.11, 0.2.12 or 0.2.13 world while keeping its players and progress. |
 | [Resource pack](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.12/PLAY-Expedition-Coop-0.2.12.zip) | Illustrated challenge HUD and icons. The server can offer it automatically. |
-| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.13/SERVER-INSTALL-0.2.13.txt) | A downloadable copy of the server setup guide. |
+| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/SERVER-INSTALL-0.2.14.txt) | A downloadable copy of the server setup guide. |
 
-[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.13). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
+[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.14). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
+
+## Terrain-preparation hotfix
+
+Version 0.2.14 spreads terrain chunk requests and encounter placement across scheduled steps to reduce long creation ticks. It also cancels saved interrupted preparation after restart and releases its forced chunks. Active and completed expeditions remain intact. Keep the same resource-pack URL and SHA1. The normal server watchdog remains enabled.
 
 ## Install a fresh server
 
@@ -54,11 +58,11 @@ Save and restart after changes. With the pack required, players must accept it t
 
 For manual installation, download the resource-pack ZIP, keep it zipped, put it in your client's `resourcepacks` folder, and enable **Expedition Co-op 0.2.12** in Options → Resource Packs. Disable older Expedition/CTM packs. A server does not offer the world's embedded `resources.zip` automatically.
 
-## Update an existing 0.2.11 or 0.2.12 server
+## Update an existing 0.2.11, 0.2.12 or 0.2.13 server
 
 1. Stop the server and back it up.
 2. Upload the **server datapack update ZIP** into `expedition-coop/datapacks`.
-3. Extract it there, allowing overwrites. Confirm that the resulting file is `expedition-coop/datapacks/expedition-board/pack.mcmeta` and its description contains **0.2.13**.
+3. Extract it there, allowing overwrites. Confirm that the resulting file is `expedition-coop/datapacks/expedition-board/pack.mcmeta` and its description contains **0.2.14**.
 4. **Move the update ZIP out of `datapacks` after extraction.** Keep the extracted `expedition-board` folder there.
 5. Apply the resource-pack values above and restart.
 
@@ -98,7 +102,7 @@ During a run, the host can abandon through a separate confirmation, ending the w
 |---|---|
 | Missing symbols or boxes in the HUD | Accept the server pack, or enable Expedition Co-op 0.2.12 manually and disable older packs. |
 | Invalid SHA1 warning | The SHA1 field must contain only `0e6ae7465ad875caf9c2eb701ca67446e99908c5`. |
-| Missing metadata in `Expedition-Server-Update-0.2.13.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
+| Missing metadata in `Expedition-Server-Update-0.2.14.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
 | Normal terrain instead of the Expedition Hall | Check the active world name and folder nesting. |
 | Lobby buttons cannot be used | Confirm spawn protection is `0` and restart. |
 | `resource-pack-id missing, using default` | Minecraft supplied an ID; this message alone does not block startup. |
@@ -109,5 +113,6 @@ During a run, the host can abandon through a separate confirmation, ending the w
 This release is an eight-objective cooperative playtest. More objectives, difficulty options and further structure improvements are planned. Bedrock support is a future goal; this download is for Java Edition 26.3.
 
 Inspired by Fetchr's replayable adventure format. Expedition Board is a separate project and is not an official Fetchr release.
+
 
 
