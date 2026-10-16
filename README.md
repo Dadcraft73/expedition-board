@@ -1,19 +1,19 @@
 # Expedition Board
 
-A replayable Minecraft adventure from Dadcraft73. Gather supplies, grow an oak, explore biome-themed encounters and bank relics together.
+A replayable Minecraft adventure from Dadcraft73. Gather supplies, grow a tree, explore biome-themed encounters and bank relics together.
 
-**Current playtest: 0.2.12 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
+**Current playtest: 0.2.13 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
 
 ## Downloads
 
 | Download | Use it for |
 |---|---|
-| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.12/Expedition-Coop-Server-0.2.12.zip) | A new server installation. Starts clean in the Expedition Hall. |
-| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.12/Expedition-Server-Update-0.2.12.zip) | Updating an existing 0.2.11 world while keeping its players and progress. |
+| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.13/Expedition-Coop-Server-0.2.13.zip) | A new server installation. Starts clean in the Expedition Hall. |
+| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.13/Expedition-Server-Update-0.2.13.zip) | Updating an existing 0.2.11 or 0.2.12 world while keeping its players and progress. |
 | [Resource pack](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.12/PLAY-Expedition-Coop-0.2.12.zip) | Illustrated challenge HUD and icons. The server can offer it automatically. |
-| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.12/SERVER-INSTALL-0.2.12.txt) | A downloadable copy of the server setup guide. |
+| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.13/SERVER-INSTALL-0.2.13.txt) | A downloadable copy of the server setup guide. |
 
-[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.12). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
+[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.13). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
 
 ## Install a fresh server
 
@@ -54,11 +54,11 @@ Save and restart after changes. With the pack required, players must accept it t
 
 For manual installation, download the resource-pack ZIP, keep it zipped, put it in your client's `resourcepacks` folder, and enable **Expedition Co-op 0.2.12** in Options → Resource Packs. Disable older Expedition/CTM packs. A server does not offer the world's embedded `resources.zip` automatically.
 
-## Update an existing 0.2.11 server
+## Update an existing 0.2.11 or 0.2.12 server
 
 1. Stop the server and back it up.
 2. Upload the **server datapack update ZIP** into `expedition-coop/datapacks`.
-3. Extract it there, allowing overwrites. Confirm that the resulting file is `expedition-coop/datapacks/expedition-board/pack.mcmeta` and its description contains **0.2.12**.
+3. Extract it there, allowing overwrites. Confirm that the resulting file is `expedition-coop/datapacks/expedition-board/pack.mcmeta` and its description contains **0.2.13**.
 4. **Move the update ZIP out of `datapacks` after extraction.** Keep the extracted `expedition-board` folder there.
 5. Apply the resource-pack values above and restart.
 
@@ -66,7 +66,7 @@ This updates the datapack without replacing your world or player data. Existing 
 
 ## Start playing
 
-1. Join the Expedition Hall. Everyone playing together selects the **same team color**.
+1. Join the Expedition Hall. Everyone playing together selects the **same team color** at the wall panels beside the big board.
 2. Check **TEAM STATUS**, then one player presses **START TEAM RUN**. That player becomes the run's host.
 3. Wait for site generation and the countdown. Difficult terrain can take longer to prepare. Players arrive at the same camp.
 4. Gather your own equipment. Right-click camp-board symbols for task details, or right-click the paper Challenge Card, open chat with **T**, and select a topic. An optional book is available there.
@@ -80,13 +80,13 @@ You share the timer, objective progress and banked relics. Supply goals combine 
 | Cooked porkchops | Carry the amount shown on the card. |
 | Metal block | Craft the selected iron block, raw iron block or copper block. |
 | Bread | Carry the amount shown on the card. |
-| Natural Roots | Plant an oak sapling anywhere in the Overworld during the run and let it grow naturally. |
+| Natural Roots | Plant any naturally growing Overworld tree during the run and let it grow naturally. Poplar and mangrove count. |
 | Waystation | Restore its signal fire, pull the lever and collect the relic. |
 | Watchtower | Climb all three stair flights and collect the rooftop relic. |
 | Buried vault | Find the magenta flag, descend through the entrance and solve the three-lamp circuit to open the relic chamber. |
 | Fortified camp | Activate the encounter, defeat both husk waves and collect the relic. |
 
-For the oak objective, existing trees do not count. Bone meal or placed oak logs within six blocks of a tracked plant disqualify it; an adjacent dispenser also disqualifies it. Break and replant if needed. Growth remains normal vanilla speed, and unloaded chunks wait until someone returns.
+Natural Roots accepts oak, spruce, birch, jungle, acacia, dark oak, cherry, pale oak, Poplar and mangrove. Dark oak and pale oak need 2x2 saplings. Azalea and Nether fungi do not count because they need bone meal. Existing trees do not count. Bone meal or placed oak logs within six blocks of a tracked plant disqualify it; an adjacent dispenser also disqualifies it. Break and replant if needed. Growth remains normal vanilla speed, and unloaded chunks wait until someone returns.
 
 Either teammate may collect a relic. Banked progress survives death. Each player keeps their own equipment and bed spawn; the starting camp is the default respawn location. A newcomer can choose the active color to join at camp, while existing players cannot use team selection as a teleport.
 
@@ -98,7 +98,7 @@ During a run, the host can abandon through a separate confirmation, ending the w
 |---|---|
 | Missing symbols or boxes in the HUD | Accept the server pack, or enable Expedition Co-op 0.2.12 manually and disable older packs. |
 | Invalid SHA1 warning | The SHA1 field must contain only `0e6ae7465ad875caf9c2eb701ca67446e99908c5`. |
-| Missing metadata in `Expedition-Server-Update-0.2.12.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
+| Missing metadata in `Expedition-Server-Update-0.2.13.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
 | Normal terrain instead of the Expedition Hall | Check the active world name and folder nesting. |
 | Lobby buttons cannot be used | Confirm spawn protection is `0` and restart. |
 | `resource-pack-id missing, using default` | Minecraft supplied an ID; this message alone does not block startup. |
@@ -109,3 +109,5 @@ During a run, the host can abandon through a separate confirmation, ending the w
 This release is an eight-objective cooperative playtest. More objectives, difficulty options and further structure improvements are planned. Bedrock support is a future goal; this download is for Java Edition 26.3.
 
 Inspired by Fetchr's replayable adventure format. Expedition Board is a separate project and is not an official Fetchr release.
+
+
