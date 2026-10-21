@@ -2,22 +2,22 @@
 
 A replayable Minecraft adventure from Dadcraft73. Gather supplies, complete rotating tree collections, explore biome-themed encounters and bank relics together.
 
-**Current playtest: 0.2.25 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
+**Current playtest: 0.2.26 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
 
 ## Downloads
 
 | Download | Use it for |
 |---|---|
-| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | Base world for a new installation. Apply the 0.2.25 datapack update after extracting it. |
-| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.25/Expedition-Server-Update-0.2.25.zip) | Update an existing server while keeping its players and progress. |
+| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | Base world for a new installation. Apply the 0.2.26 datapack update after extracting it. |
+| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.26/Expedition-Server-Update-0.2.26.zip) | Update an existing server while keeping its players and progress. |
 | [Resource pack](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.25/PLAY-Expedition-Coop-0.2.25.zip) | Underwater brightness/clarity, optional illustrated HUD and icons. The server can offer it automatically. |
-| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.25/SERVER-INSTALL-0.2.25.txt) | A downloadable copy of the server setup guide. |
+| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.26/SERVER-INSTALL-0.2.26.txt) | A downloadable copy of the server setup guide. |
 
-[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.25). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
+[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.26). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
 
 ## Underwater visibility and recent updates
 
-Version 0.2.25 adds a minimum brightness for dark areas, including underwater door air pockets, plus a stronger submerged brightness boost. Ordinary caves and nights are more readable too. Well-lit lightmap cells remain unchanged, and Darkness still applies. These are rendering changes: world lighting, spawning, breathing and mining speed are unchanged. This update requires the new 0.2.25 resource-pack URL and SHA1 below. It includes the tower victory reward, waystation safeguard, rooftop unlock and taller vault stairs. Keep the normal watchdog enabled.
+Version 0.2.26 adds tall, illuminated encounter landmarks: twin red-and-white flag masts above the arena roof, and one yellow-and-white mast at the waystation. Each has perpendicular flags for visibility from different approaches. Existing matches receive these additions once, when a teammate approaches and the site is loaded; encounter contents are preserved. Keep the unchanged 0.2.25 resource-pack URL and SHA1 below. That pack provides readable dark areas and brighter underwater mining. This datapack includes the tower victory reward, waystation safeguard, rooftop unlock and taller vault stairs. Keep the normal watchdog enabled.
 
 ## One prepared region
 
@@ -108,7 +108,7 @@ During a run, the host can abandon through a separate confirmation, ending the w
 |---|---|
 | Missing symbols or boxes in the HUD | Accept the server pack, or enable Expedition Co-op 0.2.25 manually and disable older packs. |
 | Invalid SHA1 warning | The SHA1 field must contain only `bdab8017f24ec8a2fd7800a4cc218baaec823787`. |
-| Missing metadata in `Expedition-Server-Update-0.2.25.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
+| Missing metadata in `Expedition-Server-Update-0.2.26.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
 | Normal terrain instead of the Expedition Hall | Check the active world name and folder nesting. |
 | Lobby buttons cannot be used | Confirm spawn protection is `0` and restart. |
 | `resource-pack-id missing, using default` | Minecraft supplied an ID; this message alone does not block startup. |
