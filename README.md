@@ -2,22 +2,22 @@
 
 A replayable Minecraft adventure from Dadcraft73. Gather supplies, complete rotating tree collections, explore biome-themed encounters and bank relics together.
 
-**Current playtest: 0.2.22 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
+**Current playtest: 0.2.23 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
 
 ## Downloads
 
 | Download | Use it for |
 |---|---|
-| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | Base world for a new installation. Apply the 0.2.22 datapack update after extracting it. |
-| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.22/Expedition-Server-Update-0.2.22.zip) | Update an existing server while keeping its players and progress. |
+| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | Base world for a new installation. Apply the 0.2.23 datapack update after extracting it. |
+| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.23/Expedition-Server-Update-0.2.23.zip) | Update an existing server while keeping its players and progress. |
 | [Resource pack](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.20/PLAY-Expedition-Coop-0.2.20.zip) | Underwater brightness/clarity, optional illustrated HUD and icons. The server can offer it automatically. |
-| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.22/SERVER-INSTALL-0.2.22.txt) | A downloadable copy of the server setup guide. |
+| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.23/SERVER-INSTALL-0.2.23.txt) | A downloadable copy of the server setup guide. |
 
-[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.22). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
+[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.23). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
 
 ## Underwater visibility and recent updates
 
-Version 0.2.22 fixes tower chest unlocking when both guards are defeated and the player is on the roof. It also includes the taller vault stairs and existing-vault repair. It uses the unchanged 0.2.20 resource pack; keep that pack URL and SHA1 when upgrading from 0.2.20. It improves underwater fog and applies a stronger underwater brightness lift than 0.2.18, without night vision. Land lighting stays as before. The pack also includes the compact default HUD, rotating collection tasks, tougher encounters, fewer signs and staged terrain preparation. Keep the normal watchdog enabled.
+Version 0.2.23 confirms successful waystation relic placement before marking it rewarded or consuming fuel, and preserves items stored in the reward chest. It also includes the tower-roof unlock fix, taller vault stairs and existing-vault repair. It uses the unchanged 0.2.20 resource pack; keep that pack URL and SHA1 when upgrading from 0.2.20. It improves underwater fog and applies a stronger underwater brightness lift than 0.2.18, without night vision. Land lighting stays as before. The pack also includes the compact default HUD, rotating collection tasks, tougher encounters, fewer signs and staged terrain preparation. Keep the normal watchdog enabled.
 
 ## One prepared region
 
@@ -29,7 +29,7 @@ Preparation never runs alongside an active match. A finished reserve survives re
 
 1. **Stop the server and back up its current world.**
 2. Select **Vanilla Minecraft Java 26.3** and a compatible Java runtime. Local verification uses Java 25. Both players must also use Java Edition 26.3. No client mods, plugins, command blocks or RCON are required.
-3. Upload and extract the 0.2.14 fresh server-world ZIP into the server's main folder, then extract the 0.2.22 datapack update inside its datapacks folder. You should have `expedition-coop/level.dat`, `expedition-coop/datapacks` and `expedition-coop/dimensions`. Avoid an extra nested `expedition-coop` folder.
+3. Upload and extract the 0.2.14 fresh server-world ZIP into the server's main folder, then extract the 0.2.23 datapack update inside its datapacks folder. You should have `expedition-coop/level.dat`, `expedition-coop/datapacks` and `expedition-coop/dimensions`. Avoid an extra nested `expedition-coop` folder.
 4. Set the active world name to **`expedition-coop`** and spawn protection to **`0`**. Keep the host's assigned IP and ports. Use Survival, Normal difficulty, `force-gamemode=false` and `online-mode=true`. Whitelist your players for testing.
 5. Configure the resource pack using the values below, save, and start the server.
 6. Wait for the console's **Done** message, then join and accept the resource-pack prompt.
@@ -68,7 +68,7 @@ For manual installation, download the resource-pack ZIP, keep it zipped, put it 
 
 1. Stop the server and back it up.
 2. Upload the **server datapack update ZIP** into `expedition-coop/datapacks`.
-3. Extract it there, allowing overwrites. Confirm that the resulting file is `expedition-coop/datapacks/expedition-board/pack.mcmeta` and its description contains **0.2.22**.
+3. Extract it there, allowing overwrites. Confirm that the resulting file is `expedition-coop/datapacks/expedition-board/pack.mcmeta` and its description contains **0.2.23**.
 4. **Move the update ZIP out of `datapacks` after extraction.** Keep the extracted `expedition-board` folder there.
 5. Apply the resource-pack values above and restart.
 
@@ -108,7 +108,7 @@ During a run, the host can abandon through a separate confirmation, ending the w
 |---|---|
 | Missing symbols or boxes in the HUD | Accept the server pack, or enable Expedition Co-op 0.2.20 manually and disable older packs. |
 | Invalid SHA1 warning | The SHA1 field must contain only `8a279a793bd803c0767f9e9e8e508f4e5a8cefb0`. |
-| Missing metadata in `Expedition-Server-Update-0.2.22.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
+| Missing metadata in `Expedition-Server-Update-0.2.23.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
 | Normal terrain instead of the Expedition Hall | Check the active world name and folder nesting. |
 | Lobby buttons cannot be used | Confirm spawn protection is `0` and restart. |
 | `resource-pack-id missing, using default` | Minecraft supplied an ID; this message alone does not block startup. |
@@ -119,6 +119,7 @@ During a run, the host can abandon through a separate confirmation, ending the w
 This release is an eight-objective cooperative playtest. More objectives, difficulty options and further structure improvements are planned. Bedrock support is a future goal; this download is for Java Edition 26.3.
 
 Inspired by Fetchr's replayable adventure format. Expedition Board is a separate project and is not an official Fetchr release.
+
 
 
 
