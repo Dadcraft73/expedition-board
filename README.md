@@ -1,29 +1,29 @@
 # Expedition Board
 
-A replayable Minecraft adventure from Dadcraft73. Gather supplies, complete rotating tree collections, explore biome-themed encounters and bank relics together.
+A replayable Minecraft adventure from Dadcraft73. Gather rotating supplies, tackle biome-themed combat events, explore a generated region and bank relics together.
 
-**Current playtest: 0.2.26 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
+**Current playtest: 0.3.0 · Minecraft Java Edition 26.3 · eight objectives.** Play solo or as one cooperative team. One expedition runs at a time; the four selectable colors do not create simultaneous competing matches. This is a work in progress, and human testing is still assessing pacing, combat and structures.
 
 ## Downloads
 
 | Download | Use it for |
 |---|---|
-| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | Base world for a new installation. Apply the 0.2.26 datapack update after extracting it. |
-| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.26/Expedition-Server-Update-0.2.26.zip) | Update an existing server while keeping its players and progress. |
+| [Fresh server world](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.14/Expedition-Coop-Server-0.2.14.zip) | Base world for a new installation. Apply the 0.3.0 datapack update after extracting it. |
+| [Server datapack update](https://github.com/Dadcraft73/expedition-board/releases/download/v0.3.0/Expedition-Server-Update-0.3.0.zip) | Update an existing server while keeping its players and progress. |
 | [Resource pack](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.25/PLAY-Expedition-Coop-0.2.25.zip) | Underwater brightness/clarity, optional illustrated HUD and icons. The server can offer it automatically. |
-| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.2.26/SERVER-INSTALL-0.2.26.txt) | A downloadable copy of the server setup guide. |
+| [Installation instructions](https://github.com/Dadcraft73/expedition-board/releases/download/v0.3.0/SERVER-INSTALL-0.3.0.txt) | A downloadable copy of the server setup guide. |
 
-[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.2.26). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
+[View the release](https://github.com/Dadcraft73/expedition-board/releases/tag/v0.3.0). Choose the named downloads above; GitHub's **Source code** ZIP is not the playable world.
 
-## Underwater visibility and recent updates
+## Current playtest changes
 
-Version 0.2.26 adds tall, illuminated encounter landmarks: twin red-and-white flag masts above the arena roof, and one yellow-and-white mast at the waystation. Each has perpendicular flags for visibility from different approaches. Existing matches receive these additions once, when a teammate approaches and the site is loaded; encounter contents are preserved. Keep the unchanged 0.2.25 resource-pack URL and SHA1 below. That pack provides readable dark areas and brighter underwater mining. This datapack includes the tower victory reward, waystation safeguard, rooftop unlock and taller vault stairs. Keep the normal watchdog enabled.
+Version 0.3.0 turns the tower into a staged siege with three working spawners, parkour and an armored upper keep. The enclosed arena has three waves and locks participants inside until victory or death. It also adds arrival lighting updates, single-panel flags, wider footprint surveys, cardinal headings, hours/minutes and a supplies pool instead of guaranteed trees. Start a new expedition match for the rebuilt encounters; an active older match keeps its mechanics and progress. Keep resource pack 0.2.25 and its SHA1 below. No Night Vision is added. If your server URL still says 0.2.12, its underwater/dark-area visibility improvements are not loaded: save the new URL/hash and confirm they persisted before restarting.
 
 ## One prepared region
 
 After roughly ten seconds with players in an idle lobby, the game prepares one upcoming region: terrain around the five sites, structures, lighting and selected objectives. Chat announces when it is ready. Pressing Start reuses that region and card, loads the saved camp and runs the normal countdown. If you press Start early, the team waits in the lobby and starts automatically when preparation finishes.
 
-Preparation never runs alongside an active match. A finished reserve survives reloads/restarts and releases its forced chunks; interrupted preparation cancels safely. After a match ends, the lobby prepares the next region. This prepares site terrain, **not every chunk of the 1024-block match box**. Exploring untouched terrain still generates chunks, and preparation can cause brief lobby lag. Local prepared starts took about 3.5 seconds including the countdown on a 4 GB/two-processor test configuration; hosting performance varies.
+Preparation never runs alongside an active match. A finished reserve survives reloads/restarts and releases its forced chunks; interrupted preparation cancels safely. After a match ends, the lobby prepares the next region. This prepares site terrain, **not every chunk of the 1024-block match box**. Exploring untouched terrain still generates chunks, and preparation can cause brief lobby lag. The larger encounters and footprint surveys increase preparation work. Starting an already prepared region still avoids building a new one at that moment; hosting performance varies.
 
 ## Install a fresh server
 
@@ -90,13 +90,13 @@ You share the timer, objective progress and banked relics. Supply goals combine 
 | Meals | A rotating cooked-meat or cooked-fish order, sometimes with multiple types. |
 | Crafting | A selected iron/raw iron/copper/redstone block order, hopper or furnace minecart. |
 | Harvest | Bread, baked potatoes, golden carrots, pumpkin pies or a mixed order. |
-| Trees | Leaves, logs, stripped logs, bark-covered wood, stripped wood or boats from five required species. |
+| Supplies | Eleven possible orders: navigation gear, rail supplies, lighting, glass, mechanisms, books, field equipment, pottery, an anvil, timber or boats. |
 | Waystation | Repair its copper socket, fuel the barrel, light the fire, pull the lever and collect its relic. |
-| Watchtower | Defeat both guards, climb the stairs and collect the unlocked rooftop relic. |
+| Siege tower | Destroy three spawners, clear staged guards, complete the parkour plate and defeat the upper keep for the roof relic. |
 | Buried vault | Find the magenta flag, descend through the entrance and solve the three-lamp circuit to open the relic chamber. |
-| Fortified camp | Activate the encounter, defeat both mixed-mob waves and collect the relic. |
+| Sealed arena | Enter together, press the barrel button and survive three waves. The gates lock; death releases a player, all-party death resets, and victory opens the gates. |
 
-The tree pool uses oak, birch, spruce, acacia and cherry. Specimen groves guarantee all five. Your selected recipe determines the required items and counts; logs and bark-covered wood are different items. The default HUD is a compact sidebar plus XYZ text. Toggle the larger illustrated HUD through the Challenge Card menu.
+Trees are two optional choices among eleven fourth-slot supplies orders. New matches do not install specimen groves. Older saved cards retain their selected requirements. Only complete orders bank; extras stay yours. The default HUD is a compact sidebar plus XYZ and cardinal heading; elapsed time uses hours/minutes. Toggle the larger illustrated HUD through the Challenge Card menu.
 
 Either teammate may collect a relic. Banked progress survives death. Each player keeps their own equipment and bed spawn; the starting camp is the default respawn location. A newcomer can choose the active color to join at camp, while existing players cannot use team selection as a teleport.
 
@@ -108,7 +108,7 @@ During a run, the host can abandon through a separate confirmation, ending the w
 |---|---|
 | Missing symbols or boxes in the HUD | Accept the server pack, or enable Expedition Co-op 0.2.25 manually and disable older packs. |
 | Invalid SHA1 warning | The SHA1 field must contain only `bdab8017f24ec8a2fd7800a4cc218baaec823787`. |
-| Missing metadata in `Expedition-Server-Update-0.2.26.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
+| Missing metadata in `Expedition-Server-Update-0.3.0.zip` | Move that ZIP out of `datapacks`; leave its extracted `expedition-board` folder. |
 | Normal terrain instead of the Expedition Hall | Check the active world name and folder nesting. |
 | Lobby buttons cannot be used | Confirm spawn protection is `0` and restart. |
 | `resource-pack-id missing, using default` | Minecraft supplied an ID; this message alone does not block startup. |
